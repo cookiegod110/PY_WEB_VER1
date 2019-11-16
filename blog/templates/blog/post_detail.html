@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <script>
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://terry-3.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+    <style>
+        #content{
+        text-align:center;
+        font-family: 'Pacifico', cursive;
+        }
+        #disqus_thread{
+        width:500px;
+        height:500px;
+        margin-left:auto;
+        margin-right:auto;
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div id = "content">
+    <h1 id="title">{{ object.title }}</h1>
+    <div class="box">
+        <p>Description: {{ object.description }}</p>
+        <p>Create Date: {{ object.create_date }}</p>
+        <p>Modify Date: {{ object.modify_date }}</p>
+        <img src="{{ object.image.url }}" width="600" height="600">
+        <div id="disqus_thread"></div>
+    </div>
+</div>
+</body>
+</html>
