@@ -19,11 +19,16 @@
 <div id="content">
     {% for post in object_list %}
     <p>{{ post.title }}</p>
-    <img src="{{ post.image.url }}">
+    <a href="{% url 'blog_detail' post.id %}"><img src="{{ post.image.url }}"></a>
     <p> {{ post.description }}</p>
     <li>Create Date: {{ post.create_date }}</li>
     <li>Modify Date: {{ post.modify_date }}</li>
     {% endfor %}
 </div>>
+<div id="create_button">
+    <a href="{% url 'blog_create' %}">
+        <button>CREATE</button>
+    </a>
+</div>
 </body>
 </html>

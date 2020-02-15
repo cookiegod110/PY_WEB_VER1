@@ -7,7 +7,7 @@ class Bookmark(models.Model):
     url = models.URLField('url', unique=True)
     create_date = models.DateTimeField('create_date',
                                        auto_now_add=True,
-                                       blank= True, null=True)
+                                       blank=True, null=True)
 
     modify_date = models.DateTimeField('modify_date',
                                        auto_now = True,

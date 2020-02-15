@@ -50,6 +50,10 @@
         유<span class="small">튜브</span>
     </h1>
 
+    <a href="{% url 'bookmark_create' %}">
+        <button>CREATE</button>
+    </a>
+
     <ul>
         {% for bookmark in object_list %}
             <li><a href="{% url 'detail' bookmark.id %}">{{ bookmark }}</a></li>

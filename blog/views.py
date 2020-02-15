@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from blog.models import Post
+from django.core.urlresolvers import reverse_lazy
 
 # Create your views here.
 class PostLV(ListView):
@@ -8,3 +9,19 @@ class PostLV(ListView):
 
 class PostDV(DetailView):
     model = Post
+
+class PostCV(CreateView):
+    model = Post
+    fields = ['title', 'image', 'description']
+    success_url = reverse_lazy('blog_index')
+
+class PostUV(UpdateView):
+    model = Post
+    fields = ['title', 'image', 'description']
+    success_url = reverse_lazy('blog_index')
+
+class PostRV(DetailView):
+    model = Post
+    fields = ['title', 'image', 'description']
+    success_url = reverse_lazy('blog_index')
+

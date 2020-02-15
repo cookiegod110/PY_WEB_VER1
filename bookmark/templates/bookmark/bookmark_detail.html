@@ -43,9 +43,18 @@
 <body>
 <div id="content">
 <h1 id ='title'>{{ object.title }}</h1>
+
+<a href="{% url 'bookmark_update' bookmark.id %}">
+    <button>UPDATE</button>
+</a>
+
+    <a href="{% url 'bookmark_delete' bookmark.id %}">
+        <button>DELETE</button>
+    </a>
+
 <ul>
     <li>URL: <a href= "{{ object.url }}"> {{ object.url }} </a></li>
-    <li>Create Data: {{ object.create_data }}</li>
+    <li>Create Data: {{ object.create.data }}</li>
     <li>Modify Date: {{ object.modify_date }}</li>
 </ul>
     <iframe src="{{ object.url }}"></iframe>

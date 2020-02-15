@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<style>
+        .text{
+            text-align:center;
+        }
+        .move{
+            text-align:center;
+            margin-top:60px;
+        }
+        a{
+            display:inline-block;
+            margin-right:20px;
+            width:100px;
+         }
+        img{
+            display:block;
+            margin-left:auto;
+            margin-right:auto;
+            with:500px;
+            height:300px;
+            text-align: center;
+         }
+    </style>
+<p class="text">로그아웃 완료</p>
+<p class="text">이용해주셔서 감사합니다</p>
+<img src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/1453126/1453126-1550721660800-346c697c67dbe.jpg">
+<div class="move">
+    <a href="{% url 'index' %}">Go Index</a>
+    <a href="{% url 'login' %}">Sign in Again</a>
+</div>
+{% endblock content %}
